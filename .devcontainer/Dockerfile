@@ -9,4 +9,4 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 # Configure conda environment
 RUN conda install python=3.9 pandas seaborn scipy scikit-learn tqdm ipykernel pytorch
 RUN conda install ipywidgets
-RUN pip install jax flax clu
+RUN pip install jax==0.3.25 jaxlib==0.3.25 flax==0.6.4 clu==0.0.8
