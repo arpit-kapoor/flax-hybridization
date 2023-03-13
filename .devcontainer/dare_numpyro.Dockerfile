@@ -23,8 +23,9 @@ WORKDIR /build
 RUN conda install python=3.9
 RUN conda install numpy pandas scikit-learn seaborn ipywidgets openpyxl
 RUN conda install jupyterlab
-RUN conda install -c conda-forge numpyro
-RUN conda install -c conda-forge arviz
 RUN pip install --upgrade pip
+RUN pip install jax jaxlib
 RUN pip install optax flax
 RUN pip install graphviz clu
+RUN pip install numpyro
+RUN conda install -c conda-forge arviz
