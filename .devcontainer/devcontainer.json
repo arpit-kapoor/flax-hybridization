@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3-miniconda
 {
-	"name": "Flax-Hybrid",
+	"name": "jsimdare/darenumpyro",
 	"build": { 
 		"context": "..",
 		"dockerfile": "Dockerfile",
@@ -11,8 +11,7 @@
 	},
 
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/project,type=bind,consistency=cached",
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/OneDrive - UNSW/Shared/Data/Streamflow/,target=/data,type=bind,consistency=cached"
+		"source=${localWorkspaceFolder},target=/project,type=bind,consistency=cached"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
