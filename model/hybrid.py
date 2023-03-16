@@ -5,7 +5,7 @@ import jax.numpy as jnp
 
 from flax import linen as nn
 
-from .awbm import SimplifiedAWBM
+from .awbm import SimpleAWBM
 from .mlp import SimpleMLP
 
 class HybridAWBM(nn.Module):
@@ -22,7 +22,7 @@ class HybridAWBM(nn.Module):
         """Function to setup class attributes
         """
         # Process-based model
-        self._process = SimplifiedAWBM(self.S_init, self.B_init)
+        self._process = SimpleAWBM(self.S_init, self.B_init)
         
         # Deep Learning model
         self._mlp = SimpleMLP(self.n_features)
@@ -34,8 +34,7 @@ class HybridAWBM(nn.Module):
         ----
         X: 2D input matrix (`batch_size`x 2)
         """
-        p_out = self._process(x[:,:2])
-        mlp_inp = jnp.concatenate([x, p_out], axis=1)
-        mlp_out = self._mlp(mlp_inp)
-        return mlp_out
+        # TODO: Write the forward pass for the hybrid model
+        out = 
+        return out
 

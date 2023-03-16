@@ -6,9 +6,9 @@ import jax.numpy as jnp
 from flax import linen as nn
 from flax.linen.initializers import constant
 
-class SimplifiedAWBM(nn.Module):
+class SimpleAWBM(nn.Module):
     '''
-    This method implements the simplified version of AWBM as explained in:
+    This class implements the simplified version of AWBM as explained in:
     
     Towards dynamic catchment modelling: a Bayesian hierarchical mixtures of experts framework
     L. Marshall, D. Nott and A. Sharma
