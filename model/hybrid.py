@@ -8,8 +8,6 @@ from flax import linen as nn
 from .awbm import SimpleAWBM
 from .mlp import SimpleMLP
 
-
-
 class HybridAWBM(nn.Module):
     """Flax module for the hybrid model.
     This module has all the parameters required to instantiate our 
@@ -41,5 +39,8 @@ class HybridAWBM(nn.Module):
         X: 2D input matrix (`batch_size`x 2)
         """
         # TODO: Write the forward pass for the hybrid model
+        p_out = self._process(x[:, :2])
+        mlp_in = jnp.concatenate([x, p_out], axis=1)
+        out = self._mlp(mlp_in)
         return out
 
