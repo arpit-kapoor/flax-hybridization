@@ -8,7 +8,13 @@ from flax import linen as nn
 from .awbm import SimpleAWBM
 from .mlp import SimpleMLP
 
+
+
 class HybridAWBM(nn.Module):
+    """Flax module for the hybrid model.
+    This module has all the parameters required to instantiate our 
+    numerical model and the neural network
+    """
     
     # AWBM Attributes
     S_init: float
@@ -35,6 +41,5 @@ class HybridAWBM(nn.Module):
         X: 2D input matrix (`batch_size`x 2)
         """
         # TODO: Write the forward pass for the hybrid model
-        out = 
         return out
 
